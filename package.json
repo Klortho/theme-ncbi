@@ -1,0 +1,22 @@
+{
+  "name": "gitbook-plugin-theme-ncbi",
+  "description": "Theme for NCBI static content rendered by GitBook",
+  "version": "0.0.1",
+  "engines": {
+    "gitbook": ">=3.0.0-pre.8"
+  },
+  "scripts": {
+    "prepublish": "./src/build.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ncbi/theme-ncbi.git"
+  },
+  "author": "NCBI",
+  "license": "SEE LICENSE IN LICENSE.txt",
+  "bugs": {
+    "url": "https://github.com/ncbi/theme-ncbi/issues"
+  },
+  "contributors": [
+  ]
+}
