@@ -24,6 +24,8 @@ For *development* (as opposed to authoring)
 
 ## Starting a new static site
 
+*** Creating the GitHub repo ***
+
 [Create a new GitHub repository](https://github.com/new), under your own
 account, to hold the static content. Enter a name and a description.
 Do NOT check "Initialize this repository with a README".
@@ -36,6 +38,8 @@ import".
 > feature to start your new repo, there are many reasons. The main reason
 > is that you can only have one fork of a given repo on GitHub, whereas
 > you might need to manage several static sites.
+
+*** Creating the GitBook project ***
 
 Create a new GitBook, and wire it up to this GitHub repo.
 
@@ -57,12 +61,20 @@ help you manage and author your content, at these URLs:
 
 You should also be able to view the published site, with NCBI styling:
 
-* Home page: https://{user}.gitbooks.io/{repo}/content/)
-* Child page: https://{user}.gitbooks.io/{repo}/content/{page}.html)
+* Home page: https://{user}.gitbooks.io/{repo}/content/
+* Child page: https://{user}.gitbooks.io/{repo}/content/{page}.html
 
-Add collaborators:
+*** Finish up ***
 
-* From the GitBook settings page
+Next, update the metadata file package.json for your project. Change 
+references to the ncbi-static-template repository/package to instead 
+describe your static site.
+
+Add collaborators, if needed, from the GitBook settings page. You'll need
+to make sure each person has GitBook and GitHub accounts, correctly set up.
+
+
+
 
 ## Building locally
 
@@ -87,10 +99,19 @@ FIXME: not working at the moment.
 gitbook build
 ```
 
-
-
-
 If you have GitBook / GitHub integration set up correctly, then pushing
 to GitHub will cause GitBook to rebuild the site.
+
+
+## Customizing styles or behavior
+
+FIXME: add description of how to change the styles and JavaScript, by 
+overriding template constructs from within this single book's repo.
+
+
+## Working on theme-ncbi or ncbi-static-template
+
+FIXME: Add instructions on how to use `npm link`.
+
 
 
