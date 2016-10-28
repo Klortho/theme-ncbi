@@ -1,19 +1,16 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<html>
 
   <head>
-    <meta name="paf-app-resources" content="" />
-    <meta name="paf_template" content="StdNCol" />
-
-    <meta xmlns:ncbi-portal="http://ncbi.gov/portal/XSLT/namespace"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="ncbi_app" content="sviewerdocs" />
-    <meta xmlns:ncbi-portal="http://ncbi.gov/portal/XSLT/namespace"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="ncbi_pdid" content="sviewerdocs" />
-
+    <meta name="ncbi_app" content="sviewerdocs" />
+    <meta name="ncbi_pdid" content="sviewerdocs" />
+    <!-- <meta name="ncbi_phid" content="CE894665813A0251000000000027000C" /> -->
+    
     <title>{% block title %}{{ config.title }}{% endblock %}</title>
-    <meta name="cms-local-nav-url" content="http://cms.ncbi.nlm.nih.gov/msaviewer/_nav" />
-    <script src="https://www.ncbi.nlm.nih.gov/core/jig/1.14.7/js/jig.min.js"></script>
+
+    <meta name="cms-local-nav-url" 
+      content="http://cms.ncbi.nlm.nih.gov/msaviewer/_nav" />
+    <script src="https://www.ncbi.nlm.nih.gov/core/jig/1.14.7/js/jig.min.js"
+      ></script>
 
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="node-id" content="4960" />
@@ -29,9 +26,7 @@
 
     <link rel="stylesheet"
       href="https://www.ncbi.nlm.nih.gov/core/assets/msaviewer/css/msaviewerdocs.css" />
-    <meta xmlns:ncbi-portal="http://ncbi.gov/portal/XSLT/namespace"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-      name="cms-edit-aux-url"
+    <meta name="cms-edit-aux-url"
       content="http://cms.ncbi.nlm.nih.gov/node/4988/edit" />
 
     <link rel="stylesheet"
