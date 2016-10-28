@@ -11,11 +11,9 @@
     <meta xmlns:ncbi-portal="http://ncbi.gov/portal/XSLT/namespace"
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="ncbi_pdid" content="sviewerdocs" />
 
-    <title>About NCBI MSA Viewer</title>
-
-    <meta name="cms-local-nav-url" content="http://cms.ncbi.nlm.nih.gov//msaviewer/_nav" />
-
-    <script type="text/javascript" src="https://www.ncbi.nlm.nih.gov/core/jig/1.14.7/js/jig.min.js"></script>
+    <title>{% block title %}{{ config.title }}{% endblock %}</title>
+    <meta name="cms-local-nav-url" content="http://cms.ncbi.nlm.nih.gov/msaviewer/_nav" />
+    <script src="https://www.ncbi.nlm.nih.gov/core/jig/1.14.7/js/jig.min.js"></script>
 
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="node-id" content="4960" />
@@ -27,19 +25,18 @@
     <meta name="path" content="msaviewer/about" />
     <meta name="node-type" content="page" />
     <meta name="jira-ticket" content="" />
-    <meta name="" content="" />
-    <link type="text/css" rel="stylesheet" href="/core/assets/msaviewer/css/msaviewerdocs.css" />
+
+
+    <link rel="stylesheet" href="/core/assets/msaviewer/css/msaviewerdocs.css" />
     <meta xmlns:ncbi-portal="http://ncbi.gov/portal/XSLT/namespace"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="cms-edit-aux-url"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+      name="cms-edit-aux-url"
       content="http://cms.ncbi.nlm.nih.gov/node/4988/edit" />
-    <!-- Page headcontent end -->
-    <!-- PageFixtures resources begin -->
-    <link xmlns="http://www.w3.org/1999/xhtml" type="text/css" rel="stylesheet"
-      href="//static.pubmed.gov/portal/portal3rc.fcgi/4117326/css/3881636/3579733.css"
-      xml:base="http://127.0.0.1/sites/static/header_footer" />
-    <link xmlns="http://www.w3.org/1999/xhtml" type="text/css" rel="stylesheet"
-      href="//static.pubmed.gov/portal/portal3rc.fcgi/4117326/css/3529739.css" media="print"
-      xml:base="http://127.0.0.1/sites/static/header_footer" />
+
+    <link rel="stylesheet"
+      href="https://static.pubmed.gov/portal/portal3rc.fcgi/4117326/css/3881636/3579733.css"/>
+    <link rel="stylesheet"
+      href="https://static.pubmed.gov/portal/portal3rc.fcgi/4117326/css/3529739.css" media="print" />
 
     <!-- PageFixtures resources end -->
     <link rel="shortcut icon" href="//www.ncbi.nlm.nih.gov/favicon.ico" />
