@@ -1,6 +1,10 @@
+#!/usr/bin/env python
+from lxml import etree
+import pypandoc
+import requests
+import sys
 import os
 import re
-from lxml import etree
 
 subsite=sys.argv[1]
 
@@ -23,3 +27,4 @@ for filename in t.xpath('//li/a/text()'):
         print("{} => {}".format(filename, outfile))
 
 sys.exit(0)
+

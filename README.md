@@ -22,6 +22,14 @@ For *development* (as opposed to authoring)
       authorize GitBook.
 
 
+## Converting static site pages
+
+The script src/import-from-cms.py can be used to convert legacy NCBI
+static site content into the new Markdown format.
+
+
+
+
 ## Starting a new static site
 
 *** Creating the GitHub repo ***
@@ -110,6 +118,22 @@ overriding template constructs from within this single book's repo.
 
 
 ## Working on theme-ncbi or ncbi-static-template
+
+Since the NCBI GitBook theme is still in infancy, you might find yourself
+needing your book to depend on a development (not-yet-released) version of
+that theme. To do this, in book.json, you can link directly to a specific
+commit or 
+a branch on
+github, like so:
+
+```
+{ "plugins": [
+    "theme-ncbi@git+https://github.com/Klortho/theme-ncbi.git#0.0.5"
+  ],
+  "pluginsConfig": {}
+}
+```
+
 
 FIXME: Add instructions on how to use `npm link`.
 
