@@ -1,6 +1,7 @@
-<html xml:lang="en" lang="en">
-
+<html>
   <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
     <meta name="ncbi_app" content="my_app" />
     <meta name="ncbi_pdid" content="my_app_page" />
     <!-- <meta name="ncbi_phid" content="CE894665813A0251000000000027000C" /> -->
@@ -8,11 +9,10 @@
     <title>{% block title %}{{ config.title }}{% endblock %}</title>
 
     <meta name="cms-local-nav-url"
-      content="http://cms.ncbi.nlm.nih.gov//msaviewer/_nav" />
+      content="http://cms.ncbi.nlm.nih.gov/msaviewer/_nav" />
     <script src="https://www.ncbi.nlm.nih.gov/core/jig/1.14.7/js/jig.min.js"
       ></script>
 
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="node-id" content="4960" />
     <meta name="revision-id" content="35056" />
     <meta name="created" content="2015-11-20T12:29:40-05:00" />
@@ -35,9 +35,9 @@
 
     <link rel="shortcut icon" href="https://www.ncbi.nlm.nih.gov/favicon.ico" />
 
-    <link rel="stylesheet" media="print"
-      href="https://static.pubmed.gov/portal/portal3rc.fcgi/4094640/css/3734262/3974050/3917732/251717/4092826/3428953/14534/45193/3534283/4024054/3894326/4005757/2867781/3621797.css" />
     <link rel="stylesheet"
+      href="https://static.pubmed.gov/portal/portal3rc.fcgi/4094640/css/3734262/3974050/3917732/251717/4092826/3428953/14534/45193/3534283/4024054/3894326/4005757/2867781/3621797.css" />
+    <link rel="stylesheet" media="print"
       href="https://static.pubmed.gov/portal/portal3rc.fcgi/4094640/css/3529741/3529739.css" />
   </head>
 
@@ -47,12 +47,14 @@
 
       <div class="col twelve_col nomargin shadow">
 
-        <!-- System messages like service outage or JS required; this is handled by the TemplateResources portlet -->
+        <!-- System messages like service outage or JS required -->
         <div class="sysmessages">
           <noscript>
             <p class="nojs">
-              <strong>Warning:</strong> The NCBI web site requires JavaScript to function. <a
-                href="/guide/browsers/#enablejs" title="Learn how to enable JavaScript"
+              <strong>Warning:</strong> The NCBI web site requires 
+                JavaScript to function. <a
+                href="/guide/browsers/#enablejs" 
+                title="Learn how to enable JavaScript"
                 target="_blank">more...</a>
             </p>
           </noscript>
