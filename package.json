@@ -5,6 +5,7 @@
   "engines": {
     "gitbook": ">=3.0.0-pre.8"
   },
+  "main": "index.js",
   "scripts": {
     "prepublish": "./src/build.sh"
   },

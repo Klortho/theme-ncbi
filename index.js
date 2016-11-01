@@ -1,21 +1,29 @@
+
+console.log('===================!!!!!!!!!!!!!!!!!!!!!!!');
+
 module.exports = {
 
-    book: {
-        assets: './assets',
-        js: [
-            'theme-api.js'
-        ],
-        css: [
-            'theme-api.css'
-        ]
+  book: {
+    assets: './assets',
+    js: [
+      'theme-api.js'
+    ],
+    css: [
+      'theme-api.css'
+    ]
+  },
+  
+  hooks: {
+    //init: function() {
+    //  console.log('!!!!!!!!!!!!!!!!! hooks.init');
+    //}
+  },
+
+  blocks: {},
+
+  filters: {
+    prettify: function(str) {
+      return str;
     },
-    
-    // Map of hooks
-    hooks: {},
-
-    // Map of new blocks
-    blocks: {},
-
-    // Map of new filters
-    filters: {}
+  },
 };

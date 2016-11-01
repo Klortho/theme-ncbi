@@ -10,9 +10,6 @@
 
     <meta name="cms-local-nav-url"
       content="http://cms.ncbi.nlm.nih.gov/msaviewer/_nav" />
-    <script src="https://www.ncbi.nlm.nih.gov/core/jig/1.14.7/js/jig.min.js"
-      ></script>
-
     <meta name="node-id" content="4960" />
     <meta name="revision-id" content="35056" />
     <meta name="created" content="2015-11-20T12:29:40-05:00" />
@@ -22,6 +19,9 @@
     <meta name="path" content="msaviewer/about" />
     <meta name="node-type" content="page" />
     <meta name="jira-ticket" content="" />
+
+    <script src="https://www.ncbi.nlm.nih.gov/core/jig/1.14.7/js/jig.min.js"
+      ></script>
 
     <link rel="stylesheet" 
       href="css/msaviewerdocs.css" />
@@ -659,11 +659,79 @@
 
                 <div class="col1">
 
+
+
                   {% block body %}
                     {% block page %}
                       {{ page.content|safe }}
                     {% endblock %}
                   {% endblock %}
+
+
+              {% if config.debug %}
+
+                <link rel="stylesheet" 
+                  href="gitbook/gitbook-plugin-theme-ncbi/lib/highlightjs/default.min.css">
+                <script src="gitbook/gitbook-plugin-theme-ncbi/lib/highlightjs/highlight.min.js"></script>
+                <script>hljs.initHighlightingOnLoad();</script>
+
+                <h2>Debug dump</h2>
+                <ul>
+                  <li>book: <pre><code class="json">{{ 
+                    book | dump | escape 
+                  }}</code></pre></li>
+                  <li>gitbook: <pre><code class="json">{{
+                    gitbook | prettify 
+                  }}</code></pre></li>
+                  <li>page: <pre><code class="json">{{
+                    page | dump | escape
+                  }}</code></pre></li>
+                  <li>file: <pre><code class="json">{{
+                    file | dump | escape
+                  }}</code></pre></li>
+                  <li>readme: <pre><code class="json">{{
+                    readme | dump | escape
+                  }}</code></pre></li>
+                  <li>glossary: <pre><code class="json">{{
+                    glossary | dump | escape
+                  }}</code></pre></li>
+                  <li>summary: <pre><code class="json">{{
+                    summary | dump | escape
+                  }}</code></pre></li>
+                  <li>languages: <pre><code class="json">{{
+                    languages | dump | escape
+                  }}</code></pre></li>
+                  <li>output: <pre><code class="json">{{
+                    output | dump | escape
+                  }}</code></pre></li>
+                  <li>config: <pre><code class="json">{{
+                    config | dump | escape
+                  }}</code></pre></li>
+                </ul>
+              {% endif %}
+
+
+                <h2>New fangled TOC</h2>
+                <ul>
+
+                  <li>parts[0].articles[0]: 
+                    {{ summary.parts[0].articles[0].title }}</li>
+                  <li>parts[0].articles[1]: 
+                    {{ summary.parts[0].articles[1].title }}</li>
+                  <li>parts[1].articles[0]: 
+                    {{ summary.parts[1].articles[0].title }}</li>
+
+
+
+
+
+
+                  {% for part in summary.parts %}
+                    <li>{{ part.title }}</li>
+                  {% else %}
+                    <li>No parts for you!</li>
+                  {% endfor %}
+                </ul>                
 
                 </div>
                 <!--/.col1-->
