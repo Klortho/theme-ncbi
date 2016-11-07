@@ -677,36 +677,16 @@
 
                 <h2>Debug dump</h2>
                 <ul>
-                  <li>book: <pre><code class="json">{{ 
-                    book | dump | escape 
-                  }}</code></pre></li>
-                  <li>gitbook: <pre><code class="json">{{
-                    gitbook | prettify 
-                  }}</code></pre></li>
-                  <li>page: <pre><code class="json">{{
-                    page | dump | escape
-                  }}</code></pre></li>
-                  <li>file: <pre><code class="json">{{
-                    file | dump | escape
-                  }}</code></pre></li>
-                  <li>readme: <pre><code class="json">{{
-                    readme | dump | escape
-                  }}</code></pre></li>
-                  <li>glossary: <pre><code class="json">{{
-                    glossary | dump | escape
-                  }}</code></pre></li>
-                  <li>summary: <pre><code class="json">{{
-                    summary | dump | escape
-                  }}</code></pre></li>
-                  <li>languages: <pre><code class="json">{{
-                    languages | dump | escape
-                  }}</code></pre></li>
-                  <li>output: <pre><code class="json">{{
-                    output | dump | escape
-                  }}</code></pre></li>
-                  <li>config: <pre><code class="json">{{
-                    config | dump | escape
-                  }}</code></pre></li>
+                  <li>book: {{ book | prettify }}</li>
+                  <li>gitbook: {{ gitbook | prettify }}</li>
+                  <li>page: {{ page | prettify }}</li>
+                  <li>file: {{ file | prettify }}</li>
+                  <li>readme: {{ readme | prettify }}</li>
+                  <li>glossary: {{ glossary | prettify }}</li>
+                  <li>summary: {{ summary | prettify }}</li>
+                  <li>languages: {{ languages | prettify }}</li>
+                  <li>output: {{ output | prettify }}</li>
+                  <li>config: {{ config | prettify }}</li>
                 </ul>
               {% endif %}
 

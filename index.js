@@ -1,5 +1,10 @@
-
-console.log('===================!!!!!!!!!!!!!!!!!!!!!!!');
+function xmlEscape(str) {
+    return String(str).replace(/&/g, '&amp;')
+                      .replace(/</g, '&lt;')
+                      .replace(/>/g, '&gt;')
+                      .replace(/"/g, '&quot;')
+                      .replace(/'/g, "&apos;");
+}
 
 module.exports = {
 
@@ -12,18 +17,16 @@ module.exports = {
       'theme-api.css'
     ]
   },
-  
-  hooks: {
-    //init: function() {
-    //  console.log('!!!!!!!!!!!!!!!!! hooks.init');
-    //}
-  },
+
+  hooks: {},
 
   blocks: {},
 
   filters: {
-    prettify: function(str) {
-      return str;
+    prettify: function(data) {
+      return '<pre><code class="json">' +
+        xmlEscape(JSON.stringify(data, null, 4)) + 
+        '</code></pre>';
     },
   },
 };
